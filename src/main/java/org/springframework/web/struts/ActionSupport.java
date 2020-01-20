@@ -44,8 +44,7 @@ import org.springframework.web.util.WebUtils;
  * <p>As an alternative approach, you can wire your Struts Actions themselves
  * as Spring beans, passing references to them via IoC rather than looking
  * up references in a programmatic fashion. Check out
- * {@link DelegatingActionProxy DelegatingActionProxy} and
- * {@link DelegatingRequestProcessor DelegatingRequestProcessor}.
+ * {@link DelegatingActionProxy DelegatingActionProxy}
  *
  * @author Juergen Hoeller
  * @since 1.0.1
@@ -56,7 +55,6 @@ import org.springframework.web.util.WebUtils;
  * @see LookupDispatchActionSupport
  * @see MappingDispatchActionSupport
  * @see DelegatingActionProxy
- * @see DelegatingRequestProcessor
  * @deprecated as of Spring 3.0
  */
 @Deprecated
