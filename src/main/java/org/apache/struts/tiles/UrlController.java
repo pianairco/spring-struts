@@ -71,7 +71,7 @@ public class UrlController implements Controller {
 	}
 
 	/**
-	 * @see org.apache.struts.tiles.Controller#execute(org.apache.struts.tiles.ComponentContext, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, javax.servlet.ServletContext)
+	 * @see Controller#execute(ComponentContext, HttpServletRequest, HttpServletResponse, ServletContext)
 	 */
 	public void execute(
 		ComponentContext tileContext,

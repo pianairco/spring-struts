@@ -22,7 +22,7 @@ package org.apache.struts.taglib.nested;
  * This interface is so managing classes of the nested tag can identify a tag
  * as a parent tag that other tags retrieve nested properties from.
  * 
- * @see org.apache.struts.taglib.nested.NestedPropertyTag
+ * @see NestedPropertyTag
  * @see org.apache.struts.taglib.nested.logic.NestedIterateTag
  *
  * @since Struts 1.1

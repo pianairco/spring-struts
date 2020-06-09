@@ -252,7 +252,7 @@ public class DefinitionsFactoryConfig implements Serializable {
      *  access to the property accessor method.
      * @exception InvocationTargetException if the property accessor method
      *  throws an exception.
-     * @see org.apache.commons.beanutils.BeanUtils
+     * @see BeanUtils
      */
     public void populate(Map properties)
         throws IllegalAccessException, InvocationTargetException {

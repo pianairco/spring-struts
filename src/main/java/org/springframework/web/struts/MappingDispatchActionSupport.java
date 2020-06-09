@@ -44,6 +44,8 @@ import org.springframework.web.util.WebUtils;
  * as Spring beans, passing references to them via IoC rather than looking
  * up references in a programmatic fashion. Check out
  * {@link DelegatingActionProxy DelegatingActionProxy} and
+ * {@link DelegatingRequestProcessor DelegatingRequestProcessor}.
+ *
  * @author Juergen Hoeller
  * @since 1.1.3
  * @see ContextLoaderPlugIn#SERVLET_CONTEXT_PREFIX
@@ -53,6 +55,7 @@ import org.springframework.web.util.WebUtils;
  * @see DispatchActionSupport
  * @see LookupDispatchActionSupport
  * @see DelegatingActionProxy
+ * @see DelegatingRequestProcessor
  * @deprecated as of Spring 3.0
  */
 @Deprecated

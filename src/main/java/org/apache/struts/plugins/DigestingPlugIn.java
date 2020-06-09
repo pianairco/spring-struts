@@ -42,7 +42,7 @@ import org.xml.sax.SAXException;
  * of that graph into the Application context.</p>
  *
  * @version $Rev: 164530 $
- * @see org.apache.struts.action.PlugIn
+ * @see PlugIn
  * @since Struts 1.2
  */
 public class DigestingPlugIn implements PlugIn {

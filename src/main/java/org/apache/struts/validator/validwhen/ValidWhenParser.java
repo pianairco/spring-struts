@@ -38,7 +38,7 @@ import antlr.SemanticException;
 import antlr.ParserSharedInputState;
 import antlr.collections.impl.BitSet;
 
-public class ValidWhenParser extends antlr.LLkParser       implements ValidWhenParserTokenTypes
+public class ValidWhenParser extends LLkParser       implements ValidWhenParserTokenTypes
  {
 Stack argStack = new Stack();
 Object form;

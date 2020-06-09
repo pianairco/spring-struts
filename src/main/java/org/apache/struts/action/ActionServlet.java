@@ -68,8 +68,6 @@ import org.apache.struts.util.MessageResourcesFactory;
 import org.apache.struts.util.ModuleUtils;
 import org.apache.struts.util.RequestUtils;
 import org.apache.struts.util.ServletContextWriter;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
@@ -169,8 +167,7 @@ import org.xml.sax.SAXException;
  * @version $Rev: 264684 $ $Date: 2005-08-30 04:08:01 +0100 (Tue, 30 Aug 2005) $
  */
 public class ActionServlet extends HttpServlet {
-    @Autowired
-    ApplicationContext applicationContext;
+
 
     // ----------------------------------------------------- Instance Variables
 
@@ -620,7 +617,7 @@ public class ActionServlet extends HttpServlet {
      *
      * @param config The ModuleConfig.
      */
-    protected RequestProcessor getProcessorForModule(ModuleConfig config) {
+    private RequestProcessor getProcessorForModule(ModuleConfig config) {
         String key = Globals.REQUEST_PROCESSOR_KEY + config.getPrefix();
         return (RequestProcessor) getServletContext().getAttribute(key);
     }
@@ -1196,7 +1193,7 @@ public class ActionServlet extends HttpServlet {
         if (processor == null) {
            processor = getRequestProcessor(config);
         }
-        processor.process(applicationContext, request, response);
+        processor.process(request, response);
 
     }
 

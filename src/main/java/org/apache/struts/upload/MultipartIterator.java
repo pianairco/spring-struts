@@ -31,7 +31,7 @@ import javax.servlet.http.HttpServletRequest;
  * The MultipartIterator class is responsible for reading the
  * input data of a multipart request and splitting it up into
  * input elements, wrapped inside of a
- * {@link org.apache.struts.upload.MultipartElement MultipartElement}
+ * {@link MultipartElement MultipartElement}
  * for easy definition.  To use this class, create a new instance
  * of MultipartIterator passing it a HttpServletRequest in the
  * constructor.  Then use the {@link #getNextElement() getNextElement}
@@ -45,7 +45,7 @@ import javax.servlet.http.HttpServletRequest;
  *      }
  * </pre>
  *
- * @see org.apache.struts.upload.MultipartElement
+ * @see MultipartElement
  *
  * @deprecated Use the Commons FileUpload based multipart handler instead. This
  *             class will be removed after Struts 1.2.
@@ -232,7 +232,7 @@ public class MultipartIterator
      *
      * @throws IOException if the post size exceeds the maximum file size
      *         passed in the 3 argument constructor or if the "ISO-8859-1" encoding isn't found
-     * @return a {@link org.apache.struts.upload.MultipartElement MultipartElement}
+     * @return a {@link MultipartElement MultipartElement}
      *         representing the next element in the request data
      *
      */

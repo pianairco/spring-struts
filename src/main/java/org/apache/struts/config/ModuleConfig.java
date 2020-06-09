@@ -99,7 +99,7 @@ public interface ModuleConfig {
      *
      * @param config The new configuration instance to be added
      *
-     * @exception java.lang.IllegalStateException if this module configuration
+     * @exception IllegalStateException if this module configuration
      *  has been frozen
      */
     void addActionConfig(ActionConfig config);
@@ -110,7 +110,7 @@ public interface ModuleConfig {
      *
      * @param config The new configuration instance to be added
      *
-     * @exception java.lang.IllegalStateException if this module configuration
+     * @exception IllegalStateException if this module configuration
      *  has been frozen
      */
     void addDataSourceConfig(DataSourceConfig config);
@@ -121,7 +121,7 @@ public interface ModuleConfig {
      *
      * @param config The new configuration instance to be added
      *
-     * @exception java.lang.IllegalStateException if this module configuration
+     * @exception IllegalStateException if this module configuration
      *  has been frozen
      */
     void addExceptionConfig(ExceptionConfig config);
@@ -132,7 +132,7 @@ public interface ModuleConfig {
      *
      * @param config The new configuration instance to be added
      *
-     * @exception java.lang.IllegalStateException if this module configuration
+     * @exception IllegalStateException if this module configuration
      *  has been frozen
      */
     void addFormBeanConfig(FormBeanConfig config);
@@ -156,7 +156,7 @@ public interface ModuleConfig {
      *
      * @param config The new configuration instance to be added
      *
-     * @exception java.lang.IllegalStateException if this module configuration
+     * @exception IllegalStateException if this module configuration
      *  has been frozen
      */
     void addForwardConfig(ForwardConfig config);
@@ -173,7 +173,7 @@ public interface ModuleConfig {
     void addMessageResourcesConfig(MessageResourcesConfig config);
 
     /**
-     * Add a newly configured {@link org.apache.struts.config.PlugInConfig} instance to the set of
+     * Add a newly configured {@link PlugInConfig} instance to the set of
      * plug-in Actions for this module.
      *
      * @param plugInConfig The new configuration instance to be added
@@ -282,7 +282,7 @@ public interface ModuleConfig {
      *
      * @param config ActionConfig instance to be removed
      *
-     * @exception java.lang.IllegalStateException if this module configuration
+     * @exception IllegalStateException if this module configuration
      *  has been frozen
      */
     void removeActionConfig(ActionConfig config);
@@ -292,7 +292,7 @@ public interface ModuleConfig {
      *
      * @param config ActionConfig instance to be removed
      *
-     * @exception java.lang.IllegalStateException if this module configuration
+     * @exception IllegalStateException if this module configuration
      *  has been frozen
      */
     void removeExceptionConfig(ExceptionConfig config);
@@ -302,7 +302,7 @@ public interface ModuleConfig {
      *
      * @param config DataSourceConfig instance to be removed
      *
-     * @exception java.lang.IllegalStateException if this module configuration
+     * @exception IllegalStateException if this module configuration
      *  has been frozen
      */
     void removeDataSourceConfig(DataSourceConfig config);
@@ -312,7 +312,7 @@ public interface ModuleConfig {
      *
      * @param config FormBeanConfig instance to be removed
      *
-     * @exception java.lang.IllegalStateException if this module configuration
+     * @exception IllegalStateException if this module configuration
      *  has been frozen
      */
     void removeFormBeanConfig(FormBeanConfig config);
@@ -322,7 +322,7 @@ public interface ModuleConfig {
      *
      * @param config ForwardConfig instance to be removed
      *
-     * @exception java.lang.IllegalStateException if this module configuration
+     * @exception IllegalStateException if this module configuration
      *  has been frozen
      */
     void removeForwardConfig(ForwardConfig config);
@@ -332,7 +332,7 @@ public interface ModuleConfig {
      *
      * @param config MessageResourcesConfig instance to be removed
      *
-     * @exception java.lang.IllegalStateException if this module configuration
+     * @exception IllegalStateException if this module configuration
      *  has been frozen
      */
     void removeMessageResourcesConfig(MessageResourcesConfig config);

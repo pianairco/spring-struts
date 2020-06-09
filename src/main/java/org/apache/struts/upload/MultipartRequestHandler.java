@@ -84,7 +84,7 @@ public interface MultipartRequestHandler
     /**
      * This method is called on to retrieve all the FormFile
      * input elements of the request.
-     * @see org.apache.struts.upload.FormFile
+     * @see FormFile
      * @return A Hashtable where the keys are the input names of the
      *  files and the values are FormFile objects
      */

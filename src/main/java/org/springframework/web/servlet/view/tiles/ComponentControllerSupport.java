@@ -101,7 +101,7 @@ public abstract class ComponentControllerSupport extends ControllerSupport {
 
 		synchronized (this) {
 			if (this.webApplicationContext == null) {
-				this.webApplicationContext = RequestContextUtils.findWebApplicationContext(request, servletContext);
+				this.webApplicationContext = RequestContextUtils.getWebApplicationContext(request, servletContext);
 				this.messageSourceAccessor = new MessageSourceAccessor(this.webApplicationContext);
 			}
 		}

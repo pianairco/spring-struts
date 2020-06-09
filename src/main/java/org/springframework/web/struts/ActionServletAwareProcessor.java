@@ -68,5 +68,4 @@ class ActionServletAwareProcessor implements DestructionAwareBeanPostProcessor {
 			((Action) bean).setServlet(null);
 		}
 	}
-
 }

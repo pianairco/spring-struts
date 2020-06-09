@@ -522,18 +522,18 @@ public class ComponentDefinition implements Serializable {
             }
             return (Controller) instance;
 
-        } catch (java.lang.ClassNotFoundException ex) {
+        } catch (ClassNotFoundException ex) {
             throw new InstantiationException(
                 "Error - Class not found :" + ex.getMessage());
 
-        } catch (java.lang.IllegalAccessException ex) {
+        } catch (IllegalAccessException ex) {
             throw new InstantiationException(
                 "Error - Illegal class access :" + ex.getMessage());
 
-        } catch (java.lang.InstantiationException ex) {
+        } catch (InstantiationException ex) {
             throw ex;
 
-        } catch (java.lang.ClassCastException ex) {
+        } catch (ClassCastException ex) {
             throw new InstantiationException(
                 "Controller of class '"
                     + classname

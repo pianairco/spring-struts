@@ -1008,7 +1008,7 @@ public class RequestUtils {
      * @param context The ServletContext for this web application
      *
      * @since Struts 1.1
-     * @deprecated Use {@link org.apache.struts.util.ModuleUtils#selectModule(String,HttpServletRequest,ServletContext)} instead.
+     * @deprecated Use {@link ModuleUtils#selectModule(String,HttpServletRequest,ServletContext)} instead.
      * This will be removed after Struts 1.2.
      */
     public static void selectModule(
@@ -1029,7 +1029,7 @@ public class RequestUtils {
      * @param request The servlet request we are processing
      * @param context The ServletContext for this web application
      *
-     * @deprecated Use {@link org.apache.struts.util.ModuleUtils#selectModule(HttpServletRequest,ServletContext)} instead.
+     * @deprecated Use {@link ModuleUtils#selectModule(HttpServletRequest,ServletContext)} instead.
      * This will be removed after Struts 1.2.
      */
     public static void selectModule(HttpServletRequest request, ServletContext context) {
@@ -1045,7 +1045,7 @@ public class RequestUtils {
      * @param request The servlet request we are processing
      * @param context The ServletContext for this web application
      * @return The module prefix or ""
-     * @deprecated Use Use {@link org.apache.struts.util.ModuleUtils#getModuleName(HttpServletRequest,ServletContext)} instead.
+     * @deprecated Use Use {@link ModuleUtils#getModuleName(HttpServletRequest,ServletContext)} instead.
      * This will be removed after Struts 1.2.
      */
     public static String getModuleName(HttpServletRequest request, ServletContext context) {
@@ -1063,7 +1063,7 @@ public class RequestUtils {
      * @param context The ServletContext for this web application
      *
      * @return The module prefix or ""
-     * @deprecated Use {@link org.apache.struts.util.ModuleUtils#getModuleName(String,ServletContext)} instead.
+     * @deprecated Use {@link ModuleUtils#getModuleName(String,ServletContext)} instead.
      * This will be removed after Struts 1.2.
      */
     public static String getModuleName(String matchPath, ServletContext context) {
@@ -1088,7 +1088,7 @@ public class RequestUtils {
      * @return the ModuleConfig object from request, or null if none is set in
      * the request.
      * @since Struts 1.1
-     * @deprecated Use {@link org.apache.struts.util.ModuleUtils#getModuleConfig(HttpServletRequest)} instead.
+     * @deprecated Use {@link ModuleUtils#getModuleConfig(HttpServletRequest)} instead.
      * This will be removed after Struts 1.2.
      */
     public static ModuleConfig getRequestModuleConfig(HttpServletRequest request) {
@@ -1107,7 +1107,7 @@ public class RequestUtils {
      *
      * @return the ModuleConfig object
      * @since Struts 1.1
-     * @deprecated Use {@link org.apache.struts.util.ModuleUtils#getModuleConfig(HttpServletRequest,ServletContext)} instead.
+     * @deprecated Use {@link ModuleUtils#getModuleConfig(HttpServletRequest,ServletContext)} instead.
      * This will be removed after Struts 1.2.
      */
     public static ModuleConfig getModuleConfig(
@@ -1129,7 +1129,7 @@ public class RequestUtils {
      *
      * @return An array of module prefixes.
      * @since Struts 1.1
-     * @deprecated Use {@link org.apache.struts.util.ModuleUtils#getModulePrefixes(ServletContext)} instead.
+     * @deprecated Use {@link ModuleUtils#getModulePrefixes(ServletContext)} instead.
      * This will be removed after Struts 1.2.
      */
     public static String[] getModulePrefixes(ServletContext context) {
@@ -1173,7 +1173,7 @@ public class RequestUtils {
      * @exception JspException if a class cast exception occurs on a
      *  looked-up bean or property
      * @deprecated This will be removed after Struts 1.2.
-     * Use {@link org.apache.struts.taglib.TagUtils#computeParameters(PageContext,String,String,String,String,String,String,String,boolean)} instead.
+     * Use {@link TagUtils#computeParameters(PageContext,String,String,String,String,String,String,String,boolean)} instead.
      */
     public static Map computeParameters(
             PageContext pageContext,
@@ -1254,7 +1254,7 @@ public class RequestUtils {
      * @exception MalformedURLException if a URL cannot be created
      *  for the specified parameters
      * @deprecated This will be removed after Struts 1.2.
-     * Use {@link org.apache.struts.taglib.TagUtils#computeURL(PageContext,String,String,String,String,String,Map,String,	boolean)} instead.
+     * Use {@link TagUtils#computeURL(PageContext,String,String,String,String,String,Map,String,	boolean)} instead.
      */
     public static String computeURL(
             PageContext pageContext,
@@ -1308,7 +1308,7 @@ public class RequestUtils {
      * @exception MalformedURLException if a URL cannot be created
      *  for the specified parameters
      * @deprecated This will be removed after Struts 1.2.
-     * Use {@link org.apache.struts.taglib.TagUtils#computeURL(PageContext,String,String,String,String,String,Map,String,boolean,boolean)} instead.
+     * Use {@link TagUtils#computeURL(PageContext,String,String,String,String,String,Map,String,boolean,boolean)} instead.
      */
     public static String computeURL(
             PageContext pageContext,
@@ -1348,7 +1348,7 @@ public class RequestUtils {
      *     slash is prepended.</li>
      * </ul>
      * @deprecated  This will be removed after Struts 1.2.
-     * Use {@link org.apache.struts.taglib.TagUtils#getActionMappingName(String)} instead.
+     * Use {@link TagUtils#getActionMappingName(String)} instead.
      */
     public static String getActionMappingName(String action) {
         // :TODO: Remove after Struts 1.2
@@ -1361,7 +1361,7 @@ public class RequestUtils {
     /**
      * <p>Return the form action converted into a server-relative URL.</p>
      * @deprecated This will be removed after Struts 1.2.
-     * Use {@link org.apache.struts.taglib.TagUtils#getActionMappingURL(String,PageContext)} instead.
+     * Use {@link TagUtils#getActionMappingURL(String,PageContext)} instead.
      */
     public static String getActionMappingURL(
             String action,
@@ -1388,7 +1388,7 @@ public class RequestUtils {
      * @exception JspException if an invalid scope name
      *  is requested
      * @deprecated This will be removed after Struts 1.2.
-     * Use {@link org.apache.struts.taglib.TagUtils#lookup(PageContext,String,String)} instead.
+     * Use {@link TagUtils#lookup(PageContext,String,String)} instead.
      */
     public static Object lookup(PageContext pageContext, String name, String scopeName)
             throws JspException {
@@ -1409,7 +1409,7 @@ public class RequestUtils {
      * @throws JspException if the scopeName is not a valid name.
      * @since Struts 1.1
      * @deprecated This will be removed after Struts 1.2.
-     * Use {@link org.apache.struts.taglib.TagUtils#getScope(String)} instead.
+     * Use {@link TagUtils#getScope(String)} instead.
 
      */
     public static int getScope(String scopeName) throws JspException {
@@ -1441,7 +1441,7 @@ public class RequestUtils {
      *  IllegalAccessException, IllegalArgumentException,
      *  InvocationTargetException, or NoSuchMethodException
      * @deprecated This will be removed after Struts 1.2.
-     * Use {@link org.apache.struts.taglib.TagUtils#lookup(PageContext,String,String,String)} instead.
+     * Use {@link TagUtils#lookup(PageContext,String,String,String)} instead.
 
      */
     public static Object lookup(
@@ -1466,7 +1466,7 @@ public class RequestUtils {
      *
      * @return current user locale
      * @deprecated This will be removed after Struts 1.2.
-     * Use {@link org.apache.struts.taglib.TagUtils#getUserLocale(PageContext,String)} instead.
+     * Use {@link TagUtils#getUserLocale(PageContext,String)} instead.
      */
     public static Locale retrieveUserLocale(PageContext pageContext, String locale) {
         // :TODO: Remove after Struts 1.2
@@ -1488,7 +1488,7 @@ public class RequestUtils {
      * @return message string
      * @exception JspException if a lookup error occurs (will have been
      *  saved in the request already)
-     * @deprecated Use {@link org.apache.struts.taglib.TagUtils#message(PageContext,String,String,String)} instead.
+     * @deprecated Use {@link TagUtils#message(PageContext,String,String,String)} instead.
      * This will be removed after Struts 1.2.
      */
     public static String message(
@@ -1516,7 +1516,7 @@ public class RequestUtils {
      * @return message string
      * @exception JspException if a lookup error occurs (will have been
      *  saved in the request already)
-     * @deprecated Use {@link org.apache.struts.taglib.TagUtils#message(PageContext,String,String,String,Object[])} instead.
+     * @deprecated Use {@link TagUtils#message(PageContext,String,String,String,Object[])} instead.
      * This will be removed after Struts 1.2.
      */
     public static String message(
@@ -1550,7 +1550,7 @@ public class RequestUtils {
      * @return true if a message string for message key exists
      * @exception JspException if a lookup error occurs (will have been
      *  saved in the request already)
-     * @deprecated Use {@link org.apache.struts.taglib.TagUtils#present(PageContext ,String,String,String)} instead.
+     * @deprecated Use {@link TagUtils#present(PageContext ,String,String,String)} instead.
      * This will be removed after Struts 1.2.
      */
     public static boolean present(
@@ -1579,7 +1579,7 @@ public class RequestUtils {
 
      * @return context-relative URL
      * @since Struts 1.1
-     * @deprecated Use {@link org.apache.struts.taglib.TagUtils#pageURL(HttpServletRequest request, String page, ModuleConfig moduleConfig)} instead.
+     * @deprecated Use {@link TagUtils#pageURL(HttpServletRequest request, String page, ModuleConfig moduleConfig)} instead.
      * This will be removed after Struts 1.2.
      */
     public static String pageURL(HttpServletRequest request, String page) {
@@ -1598,7 +1598,7 @@ public class RequestUtils {
      * @param pageContext The PageContext for the current page
      * @param exception The exception to be saved
      *
-     * @deprecated Use {@link org.apache.struts.taglib.TagUtils#saveException(PageContext,Throwable)} instead.
+     * @deprecated Use {@link TagUtils#saveException(PageContext,Throwable)} instead.
      * This will be removed after Struts 1.2.
      */
     public static void saveException(PageContext pageContext, Throwable exception) {
@@ -1616,7 +1616,7 @@ public class RequestUtils {
      *
      * @return the ModuleConfig object
      * @since Struts 1.1
-     * @deprecated Use {@link org.apache.struts.taglib.TagUtils#getModuleConfig(PageContext)} instead.
+     * @deprecated Use {@link TagUtils#getModuleConfig(PageContext)} instead.
      * This will be removed after Struts 1.2.
      */
     public static ModuleConfig getModuleConfig(PageContext pageContext) {
@@ -1636,7 +1636,7 @@ public class RequestUtils {
      *
      * @return ActionErros in page context.
      * @throws JspException
-     * @deprecated Use {@link org.apache.struts.taglib.TagUtils#getActionMessages(PageContext,String)} instead.
+     * @deprecated Use {@link TagUtils#getActionMessages(PageContext,String)} instead.
      * This will be removed after Struts 1.2.
      */
     public static ActionMessages getActionMessages(PageContext pageContext, String paramName)
@@ -1657,7 +1657,7 @@ public class RequestUtils {
      *
      * @return ActionErrors from request scope
      * @exception JspException
-     * @deprecated Use {@link org.apache.struts.taglib.TagUtils#getActionErrors(PageContext,String)} instead.
+     * @deprecated Use {@link TagUtils#getActionErrors(PageContext,String)} instead.
      * This will be removed after Struts 1.2.
      */
     public static ActionErrors getActionErrors(PageContext pageContext, String paramName)
@@ -1674,7 +1674,7 @@ public class RequestUtils {
      * method; if the reflection operations throw exceptions, this will return the url
      * encoded with the old <code>URLEncoder.encode</code> method.
      * @return String - the encoded url.
-     * @deprecated Use {@link org.apache.struts.taglib.TagUtils#encodeURL(String)} instead.
+     * @deprecated Use {@link TagUtils#encodeURL(String)} instead.
      * This will be removed after Struts 1.2.
      */
     public static String encodeURL(String url) {
@@ -1689,7 +1689,7 @@ public class RequestUtils {
      * <p>Returns true if the custom tags are in XHTML mode.</p>
      *
      * @since Struts 1.1
-     * @deprecated Use {@link org.apache.struts.taglib.TagUtils#isXhtml(PageContext)} instead.
+     * @deprecated Use {@link TagUtils#isXhtml(PageContext)} instead.
      * This will be removed after Struts 1.2.
      */
     public static boolean isXhtml(PageContext pageContext) {

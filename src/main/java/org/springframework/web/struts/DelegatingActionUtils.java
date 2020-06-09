@@ -39,6 +39,8 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
  * @author Juergen Hoeller
  * @since 1.0.2
  * @see DelegatingActionProxy
+ * @see DelegatingRequestProcessor
+ * @see DelegatingTilesRequestProcessor
  * @deprecated as of Spring 3.0
  */
 @Deprecated

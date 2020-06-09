@@ -120,7 +120,7 @@ public class FieldChecks implements Serializable {
                                              Validator validator,
                                              HttpServletRequest request) {
 
-        Object form = validator.getParameterValue(org.apache.commons.validator.Validator.BEAN_PARAM);
+        Object form = validator.getParameterValue(Validator.BEAN_PARAM);
         String value = null;
         boolean required = false;
 

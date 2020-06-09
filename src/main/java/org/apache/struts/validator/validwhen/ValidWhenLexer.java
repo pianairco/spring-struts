@@ -48,7 +48,7 @@ import antlr.LexerSharedInputState;
 import antlr.collections.impl.BitSet;
 import antlr.SemanticException;
 
-public class ValidWhenLexer extends antlr.CharScanner implements ValidWhenParserTokenTypes, TokenStream
+public class ValidWhenLexer extends CharScanner implements ValidWhenParserTokenTypes, TokenStream
  {
 public ValidWhenLexer(InputStream in) {
 	this(new ByteBuffer(in));

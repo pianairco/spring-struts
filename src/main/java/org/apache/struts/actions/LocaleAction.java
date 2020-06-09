@@ -37,7 +37,7 @@ import org.apache.struts.action.ActionMapping;
 
 /**
  * Implementation of <strong>Action</strong> that changes the user's
- * {@link java.util.Locale} and forwards to a page, based on request level
+ * {@link Locale} and forwards to a page, based on request level
  * parameters that are set  (language, country, &amp; page).
  *
 */
@@ -50,7 +50,7 @@ public final class LocaleAction extends Action {
 
     /**
      * <p>
-     * Change the user's {@link java.util.Locale} based on {@link ActionForm}
+     * Change the user's {@link Locale} based on {@link ActionForm}
      * properties.
      * </p>
      * <p>
@@ -73,7 +73,7 @@ public final class LocaleAction extends Action {
      * @param response The HTTP response we are creating
      *
      * @return Action to forward to
-     * @exception java.lang.Exception if an input/output error or servlet exception occurs
+     * @exception Exception if an input/output error or servlet exception occurs
      */
     public ActionForward execute(ActionMapping mapping,
                  ActionForm form,
@@ -104,9 +104,9 @@ public final class LocaleAction extends Action {
         boolean isCountry = (country != null && country.length() > 0);
 
         if ((isLanguage) && (isCountry)) {
-           locale = new java.util.Locale(language, country);
+           locale = new Locale(language, country);
         } else if (isLanguage) {
-           locale = new java.util.Locale(language, "");
+           locale = new Locale(language, "");
     }
 
         session.setAttribute(Globals.LOCALE_KEY, locale);

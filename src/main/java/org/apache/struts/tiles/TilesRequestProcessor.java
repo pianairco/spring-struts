@@ -197,7 +197,7 @@ public class TilesRequestProcessor extends RequestProcessor {
 				}
 			}
 
-		} catch (java.lang.InstantiationException ex) {
+		} catch (InstantiationException ex) {
 
 			log.error("Can't create associated controller", ex);
 

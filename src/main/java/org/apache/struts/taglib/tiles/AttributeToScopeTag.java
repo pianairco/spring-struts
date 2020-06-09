@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package  org.apache.struts.taglib.tiles;
+package org.apache.struts.taglib.tiles;
 
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.PageContext;

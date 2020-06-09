@@ -41,8 +41,6 @@ import org.apache.struts.taglib.html.Constants;
 import org.apache.struts.upload.MultipartRequestWrapper;
 import org.apache.struts.util.MessageResources;
 import org.apache.struts.util.RequestUtils;
-import org.springframework.context.ApplicationContext;
-import org.springframework.web.struts.DelegatingActionProxy;
 
 /**
  * <p><strong>RequestProcessor</strong> contains the processing logic that
@@ -157,7 +155,7 @@ public class RequestProcessor {
      * @exception IOException if an input/output error occurs
      * @exception ServletException if a processing exception occurs
      */
-    public void process(ApplicationContext applicationContext, HttpServletRequest request,
+    public void process(HttpServletRequest request,
                         HttpServletResponse response)
         throws IOException, ServletException {
 
@@ -232,10 +230,6 @@ public class RequestProcessor {
         Action action = processActionCreate(request, response, mapping);
         if (action == null) {
             return;
-        }
-
-        if (action instanceof DelegatingActionProxy) {
-            ((DelegatingActionProxy)action).setApplicationContext(applicationContext);
         }
 
         // Call the Action instance itself

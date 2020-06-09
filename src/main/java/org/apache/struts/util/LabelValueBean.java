@@ -130,7 +130,7 @@ public class LabelValueBean implements Comparable, Serializable {
 
     /**
      * LabelValueBeans are equal if their values are both null or equal.
-     * @see java.lang.Object#equals(java.lang.Object)
+     * @see Object#equals(Object)
      */
     public boolean equals(Object obj) {
         if (obj == this) {
@@ -157,7 +157,7 @@ public class LabelValueBean implements Comparable, Serializable {
 
     /**
      * The hash code is based on the object's value.
-     * @see java.lang.Object#hashCode()
+     * @see Object#hashCode()
      */
     public int hashCode() {
         return (this.getValue() == null) ? 17 : this.getValue().hashCode();

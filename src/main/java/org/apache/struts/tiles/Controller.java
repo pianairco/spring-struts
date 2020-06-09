@@ -43,10 +43,10 @@ public interface Controller {
      * Struts 1.2.
 	 */
 	public void perform(
-		ComponentContext tileContext,
-		HttpServletRequest request,
-		HttpServletResponse response,
-		ServletContext servletContext)
+            ComponentContext tileContext,
+            HttpServletRequest request,
+            HttpServletResponse response,
+            ServletContext servletContext)
 		throws ServletException, IOException;
         
     /**
@@ -58,9 +58,9 @@ public interface Controller {
      * @param servletContext Current servlet context
      */
     public void execute(
-        ComponentContext tileContext,
-        HttpServletRequest request,
-        HttpServletResponse response,
-        ServletContext servletContext)
+            ComponentContext tileContext,
+            HttpServletRequest request,
+            HttpServletResponse response,
+            ServletContext servletContext)
         throws Exception;
 }

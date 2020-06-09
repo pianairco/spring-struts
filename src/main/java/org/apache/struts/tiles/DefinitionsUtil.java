@@ -235,7 +235,7 @@ public class DefinitionsUtil extends TilesUtil implements ComponentConstants {
      * @param servletConfig Current servlet config containing web.xml properties.
      * @exception IllegalAccessException if the caller does not have
      *  access to the property accessor method
-     * @exception java.lang.reflect.InvocationTargetException if the property accessor method
+     * @exception InvocationTargetException if the property accessor method
      *  throws an exception
      * @see org.apache.commons.beanutils.BeanUtils
      * @since tiles 20020708
@@ -245,7 +245,7 @@ public class DefinitionsUtil extends TilesUtil implements ComponentConstants {
         ServletConfig servletConfig)
         throws IllegalAccessException, InvocationTargetException {
 
-        Map properties = new DefinitionsUtil.ServletPropertiesMap(servletConfig);
+        Map properties = new ServletPropertiesMap(servletConfig);
         factoryConfig.populate(properties);
     }
 

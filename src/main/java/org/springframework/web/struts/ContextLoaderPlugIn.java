@@ -151,7 +151,7 @@ public class ContextLoaderPlugIn implements PlugIn {
 	 * @see #createWebApplicationContext
 	 */
 	public void setContextClassName(String contextClassName) throws ClassNotFoundException {
-		this.contextClass = ClassUtils.forName(contextClassName, ContextLoaderPlugIn.class.getClassLoader());
+		this.contextClass = ClassUtils.forName(contextClassName, this.getClass().getClassLoader());
 	}
 
 	/**

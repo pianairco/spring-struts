@@ -179,7 +179,7 @@ public class ModuleConfigImpl implements Serializable, ModuleConfig {
      *
      * @param config The new configuration instance to be added
      *
-     * @exception java.lang.IllegalStateException if this module configuration
+     * @exception IllegalStateException if this module configuration
      *  has been frozen
      */
     public void addActionConfig(ActionConfig config) {
@@ -199,7 +199,7 @@ public class ModuleConfigImpl implements Serializable, ModuleConfig {
      *
      * @param config The new configuration instance to be added
      *
-     * @exception java.lang.IllegalStateException if this module configuration
+     * @exception IllegalStateException if this module configuration
      *  has been frozen
      */
     public void addDataSourceConfig(DataSourceConfig config) {
@@ -217,7 +217,7 @@ public class ModuleConfigImpl implements Serializable, ModuleConfig {
      *
      * @param config The new configuration instance to be added
      *
-     * @exception java.lang.IllegalStateException if this module configuration
+     * @exception IllegalStateException if this module configuration
      *  has been frozen
      */
     public void addExceptionConfig(ExceptionConfig config) {
@@ -235,7 +235,7 @@ public class ModuleConfigImpl implements Serializable, ModuleConfig {
      *
      * @param config The new configuration instance to be added
      *
-     * @exception java.lang.IllegalStateException if this module configuration
+     * @exception IllegalStateException if this module configuration
      *  has been frozen
      */
     public void addFormBeanConfig(FormBeanConfig config) {
@@ -270,7 +270,7 @@ public class ModuleConfigImpl implements Serializable, ModuleConfig {
      *
      * @param config The new configuration instance to be added
      *
-     * @exception java.lang.IllegalStateException if this module configuration
+     * @exception IllegalStateException if this module configuration
      *  has been frozen
      */
     public void addForwardConfig(ForwardConfig config) {
@@ -288,7 +288,7 @@ public class ModuleConfigImpl implements Serializable, ModuleConfig {
      *
      * @param config The new configuration instance to be added
      *
-     * @exception java.lang.IllegalStateException if this module configuration
+     * @exception IllegalStateException if this module configuration
      *  has been frozen
      */
     public void addMessageResourcesConfig(MessageResourcesConfig config) {
@@ -301,7 +301,7 @@ public class ModuleConfigImpl implements Serializable, ModuleConfig {
     }
 
     /**
-     * Add a newly configured {@link org.apache.struts.config.PlugInConfig} instance to the set of
+     * Add a newly configured {@link PlugInConfig} instance to the set of
      * plug-in Actions for this module.
      *
      * @param plugInConfig The new configuration instance to be added

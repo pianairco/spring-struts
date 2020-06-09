@@ -292,7 +292,7 @@ public class WriteTag extends TagSupport {
         String formatString = formatStr;
 
         // Return String object as is.
-        if (value instanceof java.lang.String) {
+        if (value instanceof String) {
             return (String) value;
         } else {
 

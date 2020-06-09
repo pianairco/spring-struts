@@ -183,7 +183,7 @@ public class ActionMessage implements Serializable {
     /**
      * <p>Returns a String in the format: key[value1, value2, etc].</p>
      *
-     * @see java.lang.Object#toString()
+     * @see Object#toString()
      */
 	public String toString() {
 		StringBuffer buff = new StringBuffer();

@@ -27,7 +27,6 @@ import org.apache.struts.action.ActionServlet;
 import org.apache.struts.config.ModuleConfig;
 
 import org.springframework.beans.BeansException;
-import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.WebApplicationContext;
 
 /**
@@ -72,12 +71,14 @@ import org.springframework.web.context.WebApplicationContext;
  * <p>If you want to avoid having to specify {@code DelegatingActionProxy}
  * as the {@code Action} type in your struts-config file (for example to
  * be able to generate your Struts config file with XDoclet) consider using the
+ * {@link DelegatingRequestProcessor DelegatingRequestProcessor}.
  * The latter's disadvantage is that it might conflict with the need
  * for a different {@code RequestProcessor} subclass.
  *
  * <p>The default implementation delegates to the {@link DelegatingActionUtils}
  * class as much as possible, to reuse as much code as possible with
  * {@code DelegatingRequestProcessor} and
+ * {@link DelegatingTilesRequestProcessor}.
  *
  * <p>Note: The idea of delegating to Spring-managed Struts Actions originated in
  * Don Brown's <a href="http://struts.sourceforge.net/struts-spring">Spring Struts Plugin</a>.
@@ -90,28 +91,24 @@ import org.springframework.web.context.WebApplicationContext;
  * @author Juergen Hoeller
  * @since 1.0.1
  * @see #determineActionBeanName
+ * @see DelegatingRequestProcessor
+ * @see DelegatingTilesRequestProcessor
  * @see DelegatingActionUtils
  * @see ContextLoaderPlugIn
  * @deprecated as of Spring 3.0
  */
 @Deprecated
 public class DelegatingActionProxy extends Action {
-	ApplicationContext applicationContext;
 
 	/**
 	 * Pass the execute call on to the Spring-managed delegate {@code Action}.
 	 * @see #getDelegateAction
 	 */
-	public void setApplicationContext(
-			ApplicationContext applicationContext) {
-		this.applicationContext = applicationContext;
-	}
-
 	@Override
 	public ActionForward execute(
-			ActionMapping mapping, ActionForm form,
-			HttpServletRequest request, HttpServletResponse response)
+			ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
+
 		Action delegateAction = getDelegateAction(mapping);
 		return delegateAction.execute(mapping, form, request, response);
 	}
@@ -128,11 +125,9 @@ public class DelegatingActionProxy extends Action {
 	 * @see #determineActionBeanName
 	 */
 	protected Action getDelegateAction(ActionMapping mapping) throws BeansException {
+		WebApplicationContext wac = getWebApplicationContext(getServlet(), mapping.getModuleConfig());
 		String beanName = determineActionBeanName(mapping);
-		beanName = beanName.startsWith("/") ? beanName.substring(1) : beanName;
-		return applicationContext.getBean(beanName, Action.class);
-//		WebApplicationContext wac = getWebApplicationContext(getServlet(), mapping.getModuleConfig());
-//		return wac.getBean(beanName, Action.class);
+		return wac.getBean(beanName, Action.class);
 	}
 
 	/**

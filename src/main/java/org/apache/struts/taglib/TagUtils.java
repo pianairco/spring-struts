@@ -292,7 +292,7 @@ public class TagUtils {
      *
      * @param redirect Is this URL for a <code>response.sendRedirect()</code>?
      * @return URL with session identifier
-     * @exception java.net.MalformedURLException if a URL cannot be created
+     * @exception MalformedURLException if a URL cannot be created
      *  for the specified parameters
      */
     public String computeURLWithCharEncoding(
@@ -377,7 +377,7 @@ public class TagUtils {
      * character encoding from ServletResponse#getCharacterEncoding. Use UTF-8
      * otherwise.
      * @return URL with session identifier
-     * @exception java.net.MalformedURLException if a URL cannot be created
+     * @exception MalformedURLException if a URL cannot be created
      *  for the specified parameters
      */
     public String computeURLWithCharEncoding(

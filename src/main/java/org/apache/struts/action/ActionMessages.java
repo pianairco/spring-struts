@@ -349,7 +349,7 @@ public class ActionMessages implements Serializable {
     /**
      * <p>Returns a String representation of this ActionMessages'
      * property name=message list mapping.</p>
-     * @see java.lang.Object#toString()
+     * @see Object#toString()
      */    
 	public String toString() {
         return this.messages.toString();

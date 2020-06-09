@@ -44,7 +44,7 @@ import org.apache.struts.action.ActionMapping;
  * for validation rules.</li></ul>
  *
  * @version $Rev: 54929 $ $Date: 2004-10-16 17:38:42 +0100 (Sat, 16 Oct 2004) $
- * @see org.apache.struts.action.ActionForm
+ * @see ActionForm
  * @since Struts 1.1
  */
 public class ValidatorForm extends ActionForm implements Serializable {
